@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  border: none;
+}
+body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(221,100%,96%);
+  font-family: "Hanken Grotesk",Nunito ;
+}
+.card{
+box-shadow: 0 3px 8px  rgba(0,0,0,0.24);
+border-radius: 2rem;
+width: 550px;
+background-color: hsl(0, 0%, 100%);
+
+}
+.card__container{
+  display: flex;
+  justify-content: space-between;
+}
+.results{
+  width: 51.6%;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  background-image:linear-gradient(45deg,hsl(252, 100%, 67%),hsl(241, 81%, 54%)) ;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+.results .title{
+  color: hsl(241, 100%, 89%);
+  margin-bottom: 1rem;
+}
+.results .circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 1.2px hsla(256, 72%, 46%, 1);
+}
+.results .circle h1{
+  color:  hsl(0, 0%, 100%);
+  font-size: 3rem;
+
+}
+.results .circle p{
+  color: hsl(240, 19%, 73%);
+  font-size: .6rem
+  ;
+}
+
+.bold{
+  color: hsl(0, 0%, 100%);
+}
+.info{
+  color:hsl(241, 100%, 89%) ;
+  font-size: clamp(12px,.6rem,.8rem);
+}
+.summary{
+  width: 50%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+.summary h3{
+  margin-top: .7rem;
+  color: hsl(224, 30%, 27%);
+}
+.rows{
+  display: flex;
+  flex-flow: column nowrap;
+gap: .6rem;
+}
+
+
+.row{
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background-color:  hsl(234, 85%, 45%);
+  padding: 0.5rem 0.4rem;
+  
+  justify-content: space-between;
+}
+.row:last-child{
+  background-color:hsla(251, 52%, 96%, 0.688);
+  color: hsl(252, 100%, 67%);
+}
+.row:first-child{
+  background-color:hsl(0, 46%, 95%) ;
+  color:hsla(0, 88%, 70%, 0.775)
+}
+.row:nth-child(2){
+  background-color: hsl(35, 55%, 96%);
+  color: hsl(39, 100%, 56%);
+}
+.row:nth-child(3){
+  background-color: hsl(165, 20%, 96%);
+  color: hsl(166, 100%, 37%);
+}
+.row p b{
+  color: hsl(224, 30%, 27%);
+  font-size: clamp(.8rem,9px,1.2rem);
+}
+.row p{
+  color: hsla(242, 23%, 70%, 0.936);
+  font-size: clamp(.8rem,9px,1.2rem);
+}
+.btn{
+  height: 13.1%;
+  border-radius: 20px;
+  
+  margin-top: .8rem;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+.btn:hover{
+  cursor: pointer;
+ transform: scale(1.1);
+ letter-spacing: 1px;
+}
+.btn:active{
+  background-color: hsl(241, 81%, 54%)
+  ;
+  
+}
+.badge img{
+  width: 16.5%;
+
+  
+}
+.badge{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.badge b{
+  font-size: clamp(.7rem,8px,1.1rem);
+}
+@media screen and (max-width:500px){
+  body{
+    align-items: flex-start;
+    background-color: white;
+  }
+  .card{
+    box-shadow: none;
+    width: 100%;
+    white-space: wrap;
+  }
+  .card__container{
+    flex-flow: column nowrap;
+
+  }
+  .results{
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  }
+  .results .info{
+    width: 250px;
+  }
+  .summary{
+    width: 100%;
+  }
+  .btn{
+    height: 35.2px;
+  }
+}
